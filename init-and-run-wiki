@@ -31,5 +31,5 @@ fi
 
 # Start the tiddlywiki server
 
-exec /usr/bin/env node $NODEJS_V8_ARGS $tiddlywiki_script mywiki --server 8080 $:/core/save/all text/plain text/html "${USERNAME:-user}" "${PASSWORD-wiki}" 0.0.0.0 ${SERVE_URI}
+exec /usr/bin/env node $NODEJS_V8_ARGS $tiddlywiki_script mywiki --listen port=8080 "anon-username=chef" "username=${USERNAME:-user}" "password=${PASSWORD-wiki}" "readers=(anon)" "writers=(anon)" "host=0.0.0.0" 
 
