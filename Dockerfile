@@ -1,6 +1,6 @@
 FROM node:22
 
-RUN npm install -g tiddlywiki@5.3.8
+RUN npm install -g tiddlywiki@5.4.0
 
 # Setup wiki volume
 VOLUME /var/lib/tiddlywiki
